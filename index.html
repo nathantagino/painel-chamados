@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskManager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="header">
+        <h1> Painel de Chamados</h1>
+    </div>    
+    <div class="container">
+        <!-- Adicionar uma Tarefa -->
+        <div class="task-container" id="task-form-container">
+            <h2>Novos Chamados</h2>
+            <div id="add-task-btn" class="add-task-btn">
+                <i class="fas fa-plus-circle"></i> Adicionar uma Tarefa
+            </div>
+            <form id="task-form" class="hidden">
+                <input type="text" id="task-title" placeholder="Título" required>
+                <textarea id="task-description" placeholder="Descrição"></textarea>
+                <div class="input-group">
+                    <input type="datetime-local" id="task-date" class="datetime-input">
+                </div>
+                <select class="task-selection" placeholder="Título">
+                    <option value="" disabled selected>Técnico Responsável :</option>
+                    <option value="clara" >Clara</option>
+                    <option value="giovana"> Giovana </option>
+                    <option value="mike"> Myke</option>
+                    <option value="nathan"> Nathan </option>
+                    <option value="sergio"> Sérgio </option>
+                  </select>
+                <button type="submit" id="save-task-btn">Adicionar</button>
+            </form>
+        </div>
+
+        <!-- Tarefas em Andamento -->
+        <div class="task-container">
+            <h2>Em andamento (Atribuidos) <i id="sort-tasks-in-progress" class="fas fa-ellipsis-v"></i></h2>
+            <ul id="task-list-in-progress"></ul>
+        </div>
+
+        <!-- Tarefas Concluídas -->
+        <div class="task-container">
+            <h2>Chamados Finalizados <i id="sort-tasks-completed" class="fas fa-ellipsis-v"></i></h2>
+            <ul id="task-list-completed"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

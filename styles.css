@@ -1,0 +1,162 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #141111;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.task-container {
+    width: 30%;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+#header{
+    color:white;
+    text-align: center;
+}
+#add-task-btn, button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    display: inline-block;
+}
+
+#add-task-btn:hover, button:hover {
+    background-color: #218838;
+}
+
+#task-form {
+    margin-top: 10px;
+}
+
+#task-form button {
+    margin-top: 15px; /* Espaço entre o botão e o campo de data */
+}
+
+.hidden {
+    display: none;
+}
+
+input[type="text"], textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.datetime-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 10px;
+    margin-bottom: 5px;
+    background: #e9ecef;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.task-details {
+    flex-grow: 1;
+}
+
+.task-details strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.task-details p {
+    margin: 0;
+    color: #555;
+}
+
+.task-details small {
+    display: block;
+    margin-top: 5px;
+    color: #888;
+    font-size: 0.875rem;
+}
+
+.task-selection {
+    padding: 10px;
+    border: 2px solid #4CAF50;
+    border-radius: 4px;
+    background-color: white;
+    color: #333;
+    font-size: 16px;
+    width: 100%; /* Faz o select ocupar 100% da largura do seu contêiner */
+    appearance: none; /* Remove a aparência padrão do select */
+    -webkit-appearance: none; /* Safari e Chrome */
+    -moz-appearance: none; /* Firefox */
+    background-image: url('data:image/svg+xml;base64,...'); /* Adiciona um ícone de seta */
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%; /* Posiciona a seta */
+    background-size: 12px; /* Tamanho da seta */
+    margin-top: 10px;
+}
+
+.task-selection:focus {
+    outline: none;
+    border-color: #28a745; /* Cor da borda ao focar */
+    box-shadow: 0 0 5px rgba(0, 128, 0, 0.5); /* Efeito de sombra */
+}
+.fa-edit, .fa-trash, .fa-check-circle, .fa-undo {
+    margin-left: 10px;
+    color: #333;
+    cursor: pointer;
+}
+
+.fa-edit:hover {
+    color: #ffc107;
+}
+
+.fa-trash:hover {
+    color: #dc3545;
+}
+
+.fa-check-circle:hover, .fa-undo:hover {
+    color: #28a745;
+}
+
+.fas.fa-ellipsis-v {
+    cursor: pointer;
+    float: right;
+}
